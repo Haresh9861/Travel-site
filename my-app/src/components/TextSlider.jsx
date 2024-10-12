@@ -1,55 +1,53 @@
-import React from 'react';
-import Slider from 'react-slick';
-import { Box, Typography, Container } from '@mui/material';
-// import 'slick-carousel/slick/slick.css';
-// import 'slick-carousel/slick/slick-theme.css';
+"use client";
+
+import { Box, Typography } from "@mui/material";
+import Slider from "react-slick";
 
 const TextSlider = () => {
-  const sliderSettings = {
-    vertical: true,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    speed: 300,
+  const settings = {
+    dots: false,
     infinite: true,
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    vertical: true,
+    verticalSwiping: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
     arrows: false,
+    adaptiveHeight: true,
   };
+
+  const textItems = ["DISCOVER", "EXPLORE", "TRAVEL"];
 
   return (
     <Box
       sx={{
-        backgroundColor: '#333333',
-        minHeight: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        color: '#eeeeee',
-        fontFamily: 'Titillium Web, Helvetica, Arial, sans-serif',
+        width: "100%",
+        margin: "0 auto",
+        overflow: "hidden",
       }}
     >
-      <Container maxWidth="sm" sx={{ textAlign: 'center' }}>
-        <Typography variant="h1" sx={{ fontSize: '3rem', fontWeight: 300, marginBottom: '3rem' }}>
-          Find. Connect. Do.
-        </Typography>
-        <Typography variant="h2" sx={{ fontSize: '2rem', fontWeight: 300, marginBottom: '1rem' }}>
-          Find and do a physical activity with someone in your area.
-        </Typography>
-        <Slider {...sliderSettings}>
-          <Typography variant="h3" sx={{ fontSize: '1.5rem', lineHeight: '3rem' }}>
-            Take a leisurely jog in the park…together
-          </Typography>
-          <Typography variant="h3" sx={{ fontSize: '1.5rem', lineHeight: '3rem' }}>
-            Try a spin class...together
-          </Typography>
-          <Typography variant="h3" sx={{ fontSize: '1.5rem', lineHeight: '3rem' }}>
-            Take a bike ride around the city...together
-          </Typography>
-          <Typography variant="h3" sx={{ fontSize: '1.5rem', lineHeight: '3rem' }}>
-            Go for an indoor tennis practice...together
-          </Typography>
-        </Slider>
-      </Container>
+      <Slider {...settings}>
+        {textItems.map((item, index) => (
+          <Box key={index}>
+            <Typography
+              variant="h1"
+              sx={{
+                textAlign: "center",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                fontWeight: "700",
+                m: 0,
+                fontSize: "180px",
+              }}
+            >
+              {item}
+            </Typography>
+          </Box>
+        ))}
+      </Slider>
     </Box>
   );
 };

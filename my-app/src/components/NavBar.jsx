@@ -9,11 +9,8 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
 import Image from "next/image";
 import logo from "../../public/images/horizon.png";
 
@@ -94,10 +91,10 @@ function NavBar() {
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{
-                  my: 2,
-                  color: "white",
-                  display: "block",
                   mx: 4,
+                  my: 2,
+                  fontWeight: 600,
+                  display: "block",
                   color: "#111",
                 }}
               >
