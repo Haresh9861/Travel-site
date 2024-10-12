@@ -157,7 +157,7 @@ export default function ColorTabs() {
                 sx={{
                   bgcolor: "#fff",
                   borderRadius: "4px",
-                  minWidth: 480,
+                  minWidth: 350,
                 }}
               />
               <LocalizationProvider dateAdapter={AdapterDayjs} sx={{ mt: 0 }}>
@@ -205,7 +205,7 @@ export default function ColorTabs() {
                 sx={{
                   bgcolor: "#fff",
                   borderRadius: "4px",
-                  minWidth: 300,
+                  minWidth: 200,
                 }}
               >
                 {travellers.map((option) => (

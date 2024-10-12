@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Box className="hero_section" sx={{ position: "relative" }}>
         <NavBar />
-        <Container maxWidth="xl" sx={{ color: "#fff" }}>
+        <Container maxWidth="lg" sx={{ color: "#fff" }}>
           <Typography variant="h4" sx={{ textAlign: "center", mt: 12 }}>
             One Adventure At A Time
           </Typography>
